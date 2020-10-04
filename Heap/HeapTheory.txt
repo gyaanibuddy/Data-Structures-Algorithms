@@ -1,0 +1,6 @@
+Heap
+
+* For a node at i th location, its parent is at (i-1)/2 location
+* for a node at i th location, its children are at 2 * i + 1 and 2 * i +2 locations
+* For a complete binary tree of height h containing n = 2^h+1 - 1 nodes,
+  the sum of the heights of the nodes is n – h - 1 = n – logn – 1
