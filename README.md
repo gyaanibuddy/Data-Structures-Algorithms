@@ -25,7 +25,7 @@ Your work will be recognized by other people and you will get a chance to be in 
 You can contribute to this Project as follows:
 
 ```
-1. Fork https://github.com/gyaanibuddy/Somaiya-University from Github. 
+1. Fork https://github.com/gyaanibuddy/Data-Structures-Algorithms from Github. 
 2. Open Git Bash or terminal in your computer. 
 3. Go to the file/directory in which you want to place this repository. 
 4. Git clone the forked repository in the Gitbash/terminal.
