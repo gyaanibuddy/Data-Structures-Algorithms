@@ -9,3 +9,9 @@ Place: Mumbai, India<br/>
 About: Mentor at SMLRA<br/>
 Programming languages: Python, Java, C/C++, HTML, CSS, Js <br/>
 Email: mayank.chowdhary@somaiya.edu
+
+Name: [Sanket Gattani](https://github.com/Gattani-Sanket)<br/>
+Place: Pune, India<br/>
+About: Data Science Enthusiast<br/>
+Programming languages: Python, Java, C/C++, HTML, CSS, Js <br/>
+Email: gattanisanket3@gmail.com
