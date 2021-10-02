@@ -23,7 +23,7 @@ public class ShellSort
 		
 		}
 
-		System.out.println("Sorted Array is :");
+		System.out.println("Sorted Array is ");
         for(int i = 0; i < arr.length; i++)
         {
             if(i == arr.length-1)
