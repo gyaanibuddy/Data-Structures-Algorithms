@@ -1,62 +1,80 @@
 public class MergeSort
 {
-	public static void main(String[] args) {
+	public static void main(String[]args)
+	{
+		int a[]={20,35,-15,7,55,1,-22};
+		int b[] = new int[7];
+
+		mergesort(a,0,a.length-1);
 		
-		int [] arr = {20,35,-15,7,55,1,-22};
-		mergeSort(arr, 0, arr.length);
-
-
-		System.out.println("Sorted Array is :");
-		for(int a : arr)
-			System.out.print(a + " ");
-		System.out.println();
-
-	}
-
-	public static void mergeSort(int [] arr , int start, int end)
-	{
-
-		if(end - start < 2)
-			return;
-
-		int mid = (start + end) / 2;
-		mergeSort(arr, start, mid);
-		mergeSort(arr, mid, end);
-
-		merge(arr, start, mid, end);
-
-	}
-
-
-	public static void merge(int [] arr , int start, int mid , int end)
-	{
-
-		if(arr[mid - 1] <= arr[mid])
-			return;
-
-		int [] tmp = new int[end - start];
-		int tmp_index = 0;
-
-		int i = start;
-		int j = mid;
-
-		while(i < mid || j < end)
+        System.out.println("Sorted Array : ");
+        System.out.print("[");
+		for(int i=0;i<a.length;i++)
 		{
-			if(i < mid && j < end)
-			{
-				tmp[tmp_index++] = arr[i] > arr[j] ? arr[j++] : arr[i++];
-			}
-
-			else if(i < mid)
-				tmp[tmp_index++] = arr[i++];
-
-			else
-				tmp[tmp_index++] = arr[j++];	 
+            if(i == a.length-1)
+			    System.out.print(a[i]);
+            else
+                System.out.print(a[i] + ", ");
 		}
-
-		for(int t = start,count = 0 ; t < end ; t++)
-			arr[t] = tmp[count++];
-
+        System.out.println("]");
 	}
 
+	public static void mergesort(int[] a,int l,int h)
+	{
+		if(l < h)
+		{
+			int mid = (l+h)/2;
+			
+			mergesort(a,l,mid);			
+			mergesort(a,mid+1,h);			
+			merger(a, l, mid, h);
+		}
+	}
+
+	public static void merger(int[] a, int l,int mid,int h)
+	{
+		int i=l;
+		int j=mid+1;
+		int k=l;
+		int b[] = new int[h+1];
+		
+
+		while(i<=mid && j<=h)
+		{
+			if(a[i]<=a[j])
+			{
+				  b[k]=a[i];
+				 i++;
+				 k++;
+			}
+			else if(a[j]<a[i])
+			{
+				 b[k]=a[j];
+				 j++;
+				 k++;
+			}
+		}
+		if(i>mid)
+		{
+			while(j<=h)
+			{
+				b[k]=a[j];
+				j++;
+				k++;
+			}
+		}
+		else if(j>h)
+		{
+			while(i<=mid)
+			{
+				b[k]=a[i];
+				i++;
+				k++;
+			}
+		}
+		for(int t = l;t <=	 h ; t++)
+		{
+			a[t] =b[t];
+		}
+	}
 }

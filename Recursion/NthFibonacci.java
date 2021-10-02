@@ -4,9 +4,10 @@ public class NthFibonacci
     public static void main(String[] args)
     {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter n : ");
+        System.out.println("Enter limit :");
         int n = sc.nextInt();
-        System.out.println("The " + n + "th Fibonacci number is : " + calcFibonacci(n));
+        int result = calcFibonacci(n);
+        System.out.println("Nth Fibonacci number = " + result);
     }
 
     public static int calcFibonacci(int n)

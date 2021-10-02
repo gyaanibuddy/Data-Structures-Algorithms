@@ -1,41 +1,37 @@
 public class ShellSort
-{														
-	public static void main(String[] args) {
-		
-		int [] arr = {5,17,-25,11,96,-3};
-		int tmp = 0;
+{
+	public static void main(String[] args) 
+	{
+		int a[]={5,-7,15,95,-32,0};
 
-		for(int gap = arr.length/2 ; gap > 0 ; gap = gap / 2)
+		for(int gap=a.length/2;gap>0;gap/=2)
 		{
-			for(int x = gap; x < arr.length ; x++)
+
+			for(int i=gap;i<a.length;i++)
 			{
-				int y ;
-				int newElement = arr[x];
+				int tmp=a[i];
+				int j=i;
 
-				for(y = x; y-gap >= 0 && arr[y-gap] > newElement ; y = y - gap)
+				while(j>=gap &&a[j-gap]>tmp)
 				{
-					arr[y] = arr[y-gap];
+					a[j]=a[j-gap];
+					j-=gap;
 				}
+				a[j]=tmp;
 
-				arr[y] = newElement;
-				
 			}
-		
 		}
 
-		System.out.println("Sorted Array is ");
-        for(int i = 0; i < arr.length; i++)
-        {
-            if(i == arr.length-1)
-            {
-                System.out.print(arr[i]);
-            }
+        System.out.println("Sorted Array : ");
+        System.out.print("[");
+		for(int i=0;i<a.length;i++)
+		{
+            if(i == a.length-1)
+			    System.out.print(a[i]);
             else
-            {
-                System.out.print(arr[i] + ", ");
-            }
-        }
-		System.out.println();
-
-	}
+                System.out.print(a[i] + ", ");
+		}
+        System.out.println("]");
+	}	
+	
 }
