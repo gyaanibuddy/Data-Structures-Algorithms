@@ -5,8 +5,10 @@ public class MergeSort
 		int [] arr = {20,35,-15,7,55,1,-22};
 		mergeSort(arr, 0, arr.length);
 
+
+		System.out.println("Sorted Array is :");
 		for(int a : arr)
-			System.out.print(a + ", ");
+			System.out.print(a + " ");
 		System.out.println();
 
 	}
